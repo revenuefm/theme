@@ -1,6 +1,6 @@
 {
   "name": "revenue-fm-theme",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "homepage": "https://revenue.fm",
   "description": "A RevenueFM Bulma theme which our development team made available for public use",
   "main": "revenue-theme.sass",
