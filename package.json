@@ -36,7 +36,7 @@
   "files": [
     "css",
     "sass",
-    "revenue-fm-theme.scss",
+    "revenue-fm-theme.sass",
     "LICENSE",
     "README.md"
   ],
