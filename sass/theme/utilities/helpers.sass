@@ -1,0 +1,55 @@
+// Margin and padding helpers
+$spaceamounts: (0,5,15,20,30,45,60,75,90,105)
+$sides: (top, bottom, left, right)
+
+=spacing-helper($target: '')
+  @each $space in $spaceamounts
+    @each $side in $sides
+      .is-margin-#{$space}#{if($target == '', '', '-' + $target)}
+        margin: #{$space}px !important
+      .is-margin-#{$side}-#{$space}#{if($target == '', '', '-' + $target)}
+        margin-#{$side}: #{$space}px !important
+      .is-padding-#{$space}#{if($target == '', '', '-' + $target)}
+        padding: #{$space}px !important
+      .is-padding-#{$side}-#{$space}#{if($target == '', '', '-' + $target)}
+        padding-#{$side}: #{$space}px !important
+
+// Run the mixin
++spacing-helper()
+
++mobile()
+  +spacing-helper('mobile')
+
++tablet()
+  +spacing-helper('tablet')
+
++touch()
+  +spacing-helper('touch')
+
++desktop()
+  +spacing-helper('desktop')
+
++desktop-only()
+  +spacing-helper('desktop-only')
+
+
+// Ellipsis mixin
+=ellipsis($lines: 1)
+  display: block
+  display: -webkit-box
+  margin: 0 auto
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+  -webkit-line-clamp: $lines
+
+
+.is-ellipsis
+  +ellipsis(1)
+
+$ellipsis-sizes: (2, 3)
+
+@each $ellipsis-size in $ellipsis-sizes
+  .is-ellipsis-#{$ellipsis-size}
+    +ellipsis($ellipsis-size)
+

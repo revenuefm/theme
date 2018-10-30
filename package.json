@@ -1,0 +1,53 @@
+{
+  "name": "revenue-fm-theme",
+  "version": "1.0.2",
+  "homepage": "https://revenue.fm",
+  "description": "A RevenueFM Bulma theme which our development team made available for public use",
+  "main": "revenue-theme.sass",
+  "style": "revenue-fm-theme/css/revenue-fm-theme.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revenuefm/theme.git"
+  },
+  "keywords": [
+    "bulma",
+    "admin theme",
+    "bulma theme",
+    "revenuefm",
+    "css",
+    "sass",
+    "flexbox",
+    "responsive"
+  ],
+  "author": "Goran Krgovic <goran@revenue.fm> (https://revenue.fm)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revenuefm/theme/issues"
+  },
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/revenue-fm-theme.css css/revenue-fm-theme.css",
+    "build-cleancss": "cleancss -o css/revenue-fm-theme.min.css css/revenue-fm-theme.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true revenue-fm-theme.sass css/revenue-fm-theme.css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch"
+  },
+  "files": [
+    "css",
+    "sass",
+    "revenue-fm-theme.scss",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "bulma": "^0.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "clean-css-cli": "^4.2.1",
+    "node-sass": "^4.9.4",
+    "postcss-cli": "^6.0.1",
+    "rimraf": "^2.6.2"
+  }
+}

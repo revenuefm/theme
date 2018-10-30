@@ -1,0 +1,42 @@
+.card
+  border-radius: $radius
+  margin-bottom: 2rem
+  &:last-child
+    margin-bottom: 0
+  .card-header:last-child
+    border-bottom: none
+
+.card-header
+  border-bottom: 1px solid $border
+  &.is-linkable
+    cursor: pointer
+
+.card-header-title
+  padding: 1rem
+
+.card-header-description
+  align-items: center
+  color: $grey-dark
+  display: flex
+  flex-grow: 1
+  font-weight: $weight-normal
+  padding: 1rem
+  font-size: $size-7
+  &.is-centered
+    justify-content: center
+
+.card-content
+  padding: 1rem
+  .is-card-title
+    font-weight: $weight-bold
+    margin-bottom: 0.75rem
+    color: $grey-darker
+  &.is-paddingless
+    padding: 0
+
+.card-header
+  &.has-description
+    .card-header-title
+      flex-basis: 40%
+    .card-header-description
+      flex-basis: 60%
